@@ -1,0 +1,44 @@
+[root@151-master go-ycsb]#./bin/go-ycsb run mysql -P workloads/workloada -p recordcount=10000 -p mysql.host=192.168.233.152 -p mysql.port=4000 -p mysql.password=Testtest1 -p mysql.user=root -p mysql.db=goycsb --threads 200
+***************** properties *****************
+"mysql.db"="goycsb"
+"requestdistribution"="uniform"
+"workload"="core"
+"updateproportion"="0.5"
+"scanproportion"="0"
+"threadcount"="200"
+"mysql.host"="192.168.233.152"
+"dotransactions"="true"
+"insertproportion"="0"
+"recordcount"="10000"
+"readallfields"="true"
+"readproportion"="0.5"
+"operationcount"="1000"
+"mysql.port"="4000"
+"mysql.password"="Testtest1"
+"mysql.user"="root"
+**********************************************
+Run finished, takes 1.369647673s
+READ   - Takes(s): 1.1, Count: 488, OPS: 462.8, Avg(us): 118998, Min(us): 13319, Max(us): 330770, 99th(us): 300000, 99.9th(us): 331000, 99.99th(us): 331000
+UPDATE - Takes(s): 0.9, Count: 512, OPS: 539.5, Avg(us): 272092, Min(us): 40806, Max(us): 745164, 99th(us): 463000, 99.9th(us): 746000, 99.99th(us): 746000
+[root@151-master go-ycsb]#./bin/go-ycsb run mysql -P workloads/workloada -p recordcount=10000 -p mysql.host=192.168.233.152 -p mysql.port=4000 -p mysql.password=Testtest1 -p mysql.user=root -p mysql.db=goycsb --threads 300
+***************** properties *****************
+"mysql.port"="4000"
+"readproportion"="0.5"
+"mysql.password"="Testtest1"
+"operationcount"="1000"
+"updateproportion"="0.5"
+"recordcount"="10000"
+"scanproportion"="0"
+"mysql.host"="192.168.233.152"
+"mysql.db"="goycsb"
+"dotransactions"="true"
+"workload"="core"
+"mysql.user"="root"
+"requestdistribution"="uniform"
+"readallfields"="true"
+"insertproportion"="0"
+"threadcount"="300"
+**********************************************
+Run finished, takes 1.500263825s
+READ   - Takes(s): 1.2, Count: 458, OPS: 393.4, Avg(us): 215707, Min(us): 16998, Max(us): 490307, 99th(us): 483000, 99.9th(us): 491000, 99.99th(us): 491000
+UPDATE - Takes(s): 1.0, Count: 442, OPS: 456.1, Avg(us): 444489, Min(us): 20135, Max(us): 956040, 99th(us): 916000, 99.9th(us): 957000, 99.99th(us): 957000
