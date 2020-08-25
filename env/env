@@ -1,0 +1,22 @@
+docker stop zgc_tidb_docker_1
+docker stop zgc_tidb_docker_2
+docker stop zgc_tidb_docker_3
+docker stop zgc_tidb_docker_4
+docker rm zgc_tidb_docker_1
+docker rm zgc_tidb_docker_2
+docker rm zgc_tidb_docker_3
+docker rm zgc_tidb_docker_4
+
+docker run --name zgc_tidb_docker_1 --privileged=true -d -p 12377:2377 -p 19093:9093 -p 19097:9094 -p 13000:3000 -p 12376:2376 -p 19089:9090 -p 14000:4000 -p 10081:10080 -p 20161:20160 -p 20181:20180 --cpus=2 -m 4g drds_develop:1.1 /sbin/init
+docker run --name zgc_tidb_docker_2 --privileged=true -d  -p 12378:2377 -p 19094:9093 -p 19098:9094 -p 13001:3000 -p 12375:2376 -p 19088:9090 -p 14001:4000 -p 10082:10080 -p 20162:20160 -p 20182:20180  --cpus=2 -m 4g drds_develop:1.1 /sbin/init
+docker run --name zgc_tidb_docker_3 --privileged=true -d  -p 12379:2377 -p 19095:9093 -p 19099:9094 -p 13002:3000 -p 12374:2376 -p 19087:9090 -p 14002:4000 -p 10083:10080 -p 20163:20160 -p 20183:20180  --cpus=2 -m 4g drds_develop:1.1 /sbin/init
+docker run --name zgc_tidb_docker_4 --privileged=true -d  -p 12380:2377 -p 19096:9093 -p 19100:9094 -p 13003:3000 -p 12373:2376 -p 19086:9090 -p 14003:4000 -p 10084:10080 -p 20165:20160 -p 20184:20180  --cpus=2 -m 4g drds_develop:1.1 /sbin/init
+
+4:172.17.0.26
+3:172.17.0.25
+2:172.17.0.24
+1:172.17.0.23
+
+hostname zgc_tidb_docker_1
+passwd Testtest1
+
